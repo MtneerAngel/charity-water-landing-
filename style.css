@@ -3,7 +3,14 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: #ffffff;
   color: #1D3557;
+  animation: fadeIn 1s ease-in;
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 header {
   display: flex;
   align-items: center;
@@ -11,9 +18,11 @@ header {
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
 }
+
 .logo {
   height: 40px;
 }
+
 .hero {
   background: url('img/hero.jpg') center/cover no-repeat;
   text-align: left;
@@ -25,12 +34,14 @@ header {
   align-items: flex-start;
   height: 90vh;
 }
+
 .hero h1 {
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0 0 10px;
   max-width: 600px;
 }
+
 .hero p {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.1rem;
@@ -38,6 +49,7 @@ header {
   margin-bottom: 20px;
   color: #ffffff;
 }
+
 .cta-button {
   background-color: #FFD400;
   color: #1D3557;
@@ -47,12 +59,14 @@ header {
   font-weight: bold;
   border-radius: 6px;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
 .cta-button:hover {
   background-color: #e6be00;
   transform: scale(1.05);
 }
+
 footer {
   text-align: center;
   padding: 20px;
@@ -60,16 +74,29 @@ footer {
   background-color: #f4f4f4;
   color: #777;
 }
+
 @media (max-width: 768px) {
+  header {
+    justify-content: center;
+  }
+
   .hero {
     align-items: center;
     text-align: center;
     padding: 40px 20px;
   }
+
   .hero h1 {
     font-size: 1.8rem;
   }
+
   .hero p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .cta-button {
+    width: 90%;
     font-size: 1rem;
   }
 }
